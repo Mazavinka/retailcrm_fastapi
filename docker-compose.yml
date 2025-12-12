@@ -1,0 +1,9 @@
+services:
+  fastapi_retailcrm:
+    build: .
+    container_name: retailcrm_fastapi
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
